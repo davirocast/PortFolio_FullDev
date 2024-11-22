@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #222;
+}
+
+.logo {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+canvas {
+    background-color: #000;
+    border: 2px solid #fff;
+}
+
+.score {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px #ff0000;
+    justify-self: center;
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #222;
+    color: #fff;
+    font-size: 0,9rem;
+}

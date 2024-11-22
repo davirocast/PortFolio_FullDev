@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: #fff;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.score-board {
+    margin-bottom: 20px;
+}
+
+.tetris-container {
+    display: inline-block;
+}
+
+.grid {
+    width: 200px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(10, 20px);
+    grid-template-rows: repeat(20, 20px);
+    background-color: #222;
+}
+
+.cell {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #333;
+}
+
+.cell.tetromino {
+    background-color: #6fa;
+}
+
+.cell.taken {
+    background-color: #666;
+}

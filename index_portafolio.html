@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | Full Stack Developer</title>
+    <link rel="stylesheet" href="assets/css/styles_portafolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__background">
+            <img src="assets/images/headerA.jpg" alt="Header Background" class="header__background-image">
+        </div>
+
+        <h1 class="header__logo">*//Portfolio Full Dev Stack//*</h1>
+        <nav class="header__nav">
+            <ul class="header__menu">
+                <li class="header__menu-item"><a href="#about" class="header__menu-link">Sobre mí</a></li>
+                <li class="header__menu-item"><a href="#skills" class="header__menu-link">Habilidades</a></li>
+                <li class="header__menu-item"><a href="#projects" class="header__menu-link">Proyectos</a></li>
+                <li class="header__menu-item"><a href="#contact" class="header__menu-link">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" class="section section--about">
+        <h2 class="section__title">Sobre mí</h2>
+        <p class="section__description">Soy un desarrollador Full Stack con experiencia en diseño, desarrollo y optimización de aplicaciones web...</p>
+    </section>
+
+    <section id="skills" class="section section--skills">
+        <h2 class="section__title">Habilidades</h2>
+        <ul class="skills__list">
+            <li class="skills__item">
+                <i class="skills__icon fab fa-html5"></i>
+                <span class="skills__name">HTML5 & CSS3</span>
+            </li>
+            <li class="skills__item">
+                <i class="skills__icon fab fa-js-square"></i>
+                <span class="skills__name">JavaScript</span>
+            </li>
+            <li class="skills__item">
+                <i class="skills__icon fab fa-java"></i>
+                <span class="skills__name">Java</span>
+            </li>
+            <li class="skills__item">
+                <i class="skills__icon fab fa-react"></i>
+                <span class="skills__name">React, Node.js</span>
+            </li>
+            <li class="skills__item">
+                <i class="skills__icon fas fa-database"></i>
+                <span class="skills__name">SQL & NoSQL</span>
+            </li>
+        </ul>
+    </section>
+
+    <section id="projects" class="section section--projects">
+        <h2 class="section__title">Proyectos</h2>
+        <div class="projects__list">
+            <div class="projects__card">
+                <h3 class="projects__card-title">Proyecto 1</h3>
+                <p class="projects__card-description">Descripción del proyecto y tecnologías usadas.</p>
+            </div>
+            <div class="projects__card">
+                <h3 class="projects__card-title">Proyecto 2</h3>
+                <p class="projects__card-description">Descripción del proyecto y tecnologías usadas.</p>
+            </div>
+            <div class="projects__card">
+                <h3 class="projects__card-title">Proyecto 3</h3>
+                <p class="projects__card-description">Descripción del proyecto y tecnologías usadas.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section section--contact">
+        <h2 class="section__title">Contacto</h2>
+        <form action="#" method="post" class="contact__form">
+            <label for="name" class="contact__label">Nombre:</label>
+            <input type="text" id="name" name="name" required class="contact__input">
+            <label for="email" class="contact__label">Email:</label>
+            <input type="email" id="email" name="email" required class="contact__input">
+            <label for="message" class="contact__label">Mensaje:</label>
+            <textarea id="message" name="message" required class="contact__textarea"></textarea>
+            <button type="submit" class="contact__button">Enviar</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p class = "footer__text">Para colaboraciones y pedidos personalizados, contactanos en <a href="mailto:drcvirtualbuss@gmail.com">drcvirtualbuss@gmail.com</a></p>
+        <ul class ="footer__social-links">
+            <li><a href="https://www.behance.net/davidrojas59" target="_blank" aria-label="Behance"><i data-feather="behance"></i></a></li>
+            <li><a href="https://www.facebook.com/drcvirtualbuss" target="_blank" aria-label="Facebook"><i data-feather="facebook"></i></a></li>
+            <li><a href="https://www.github.com/drcvirtualbuss" target="_blank" aria-label="GitHub"><i data-feather="github"></i></a></li>
+        </ul>
+        <p class="footer__text">&copy; 2024 Tyr Odal Studio. Todos los derechos reservados</p>
+    </footer>
+
+    <script src="assets/js/script_portafolio.js"></script>
+</body>
+</html>
