@@ -45,3 +45,22 @@ canvas {
     color: #fff;
     font-size: 0,9rem;
 }
+
+.ghost-indicator {
+    display: flex;
+    gap: 10px;
+}
+
+.ghost {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.ghost-red { background-color: #ff0000;}
+.ghost-cyan { background-color: #00ffff;}
+.ghost-pink { background-color: #ff00ff;}
+.ghost-orange { background-color: #ffa500;}
+
+

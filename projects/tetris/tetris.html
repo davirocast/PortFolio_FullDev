@@ -6,13 +6,39 @@
     <title>Tetris Game</title>
     <link rel="stylesheet" href="tetris.css">
 </head>
-<body>
-    <h1>Tetris</h1>
-    <div class="score-board">
-        <h2>Score: <span id="score">0</span></h2>
-    </div>
-    <div class="tetris-container">
-        <div class="grid"></div>
+<body class="body">
+    <div class="tetris">
+        <header class="tetris__header">
+            <h1 class="tetris__title">Tetris</h1>
+        </header>
+        <div class="tetris__container">
+            <div class="tetris__stats">
+                <div class="tetris__type">A-TYPE</div>
+                <div class="tetris__lines">LINES: <span id="lines-count">000</span></div>
+                <div class="tetris__statistics">
+                    <h3 class="tetris__statistics-title">STATISTICS</h3>
+                    <ul class="tetris__statistics-list">
+                        <li class="tetris__stats-item">O<span id="stat-o">000</span></li>
+                        <li class="tetris__stats-item">T<span id="stat-t">000</span></li>
+                        <li class="tetris__stats-item">Z<span id="stat-z">000</span></li>
+                        <li class="tetris__stats-item">S<span id="stat-s">000</span></li>
+                        <li class="tetris__stats-item">L<span id="stat-l">000</span></li>
+                        <li class="tetris__stats-item">J<span id="stat-j">000</span></li>
+                        <li class="tetris__stats-item">I<span id="stat-i">000</span></li>
+                    </ul>
+                </div>
+                <div class="tetris__next">
+                    <h3 class="tetris__next-title">NEXT</h3>
+                    <div class="teris__next-preview" id="next-preview"></div>
+                </div>
+                <div class="tetris__level">
+                    LEVEL: <span id="score-count">0000000</span>
+                </div>
+            </div>
+            <div class="tetris__game">
+                <div id="grid" class="tetris__grid"></div>
+            </div>
+        </div>
     </div>
     <script src ="tetris.js" defer></script>
 </body>

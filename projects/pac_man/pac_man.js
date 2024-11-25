@@ -19,6 +19,15 @@ const pacman = {
     nextDirection: 'right'
 };
 
+// Fantasma
+
+const ghost = [
+    { x: tileSize * 14.5, y: tileSize * 6.5, size:20, color: 'red', direction: 'up', speed: 2},
+    { x: tileSize * 13.5, y: tileSize * 6.5, size:20, color: 'pink', direction: 'down', speed: 2},
+    { x: tileSize * 12.5, y: tileSize * 6.5, size:20, color: 'cyan', direction: 'left', speed: 2},
+    { x: tileSize * 11.5, y: tileSize * 6.5, size:20, color: 'orange', direction: 'right', speed: 2},
+];
+
 // Laberinto: 1 = pared, 0 = espacio vacío
 const maze = [
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
@@ -37,7 +46,6 @@ const maze = [
 
 // Cápsulas de Pac-Man (coordenadas de las celdas vacías donde Pac-Man puede comer)
 const capsules = [];
-
 function generateCapsules() {
     for (let row = 0; row < maze.length; row++) {
         for (let col = 0; col < maze[row].length; col++) {
@@ -98,10 +106,35 @@ function drawCapsules() {
     }
 }
 
+// Funcion Dibujar Fantasmas
+
+function drawGhosts() {
+    ghost.forEach((ghost) => {
+        ctx.beginPath();
+        ctx.arc(ghost.x, ghost.y, ghost.size,Math.PI,0);
+        ctx.lineto(ghost.x + ghost.size /2);
+        ctx.arc(ghost.x, ghost.size /2, ghost.size, 0, Math.PI, true);
+        ctx.closePath();
+        ctx.fillStyle = ghost.color;
+        ctx.fill();
+
+        ctx.fillStyle = 'white';
+        ctx.beginPath();
+        ctx.arc(ghost.x - 5, ghost.y -5, 5, 0, 2 * Math.PI);
+        ctx.arc(ghost.x + 5, ghost.y -5, 5, 0, 2 * Math.PI);
+        ctx.fill();
+
+        ctx.fillStyle = 'black';
+        ctx.beginPath();
+        ctx.arc(ghost.x - 5, ghost.y +5, 5, 0, 2 * Math.PI);
+        ctx.arc(ghost.x + 5, ghost.y +5, 5, 0, 2 * Math.PI);
+        ctx.fill();
+    });
+}
 function canMove(x, y) {
     let row = Math.floor(y / tileSize);
     let col = Math.floor(x / tileSize);
-    
+
     if (maze[row] && maze[row][col] === 0) {
         return true;  // Se puede mover si la celda es vacía (0)
     }
@@ -123,7 +156,41 @@ function movePacman() {
         pacman.y += pacman.speed;
         pacman.direction = 'down';
     }
+}
 
+function moveGhosts()  {
+    ghost.forEach((ghost) => {
+        let nextX = ghost.x;
+        let nextY = ghost.y;
+
+        switch (ghost.direction) {
+            case 'left': nextX -= ghost.speed; break;
+            case 'right': nextX += ghost.speed; break;
+            case 'up': nextY -= ghost.speed; break;
+            case 'down': nextY += ghost.speed; break;
+        }
+
+        if (!canMove(nextX, nextY)) {
+            const directions = ['left', 'right', 'up', 'down'];
+            ghost.direction = directions[Math.floor(Math.random() * directions.length)];
+        }else {
+            ghost.x = nextX;
+            ghost.y = nextY;
+        }
+    });
+}
+
+function chasePacman() {
+    ghost.forEach((ghost) => {
+        const dx = pacman.x - ghost.x;
+        const dy = pacman.y - ghost.y;
+
+        if (Math.abs(dx) > Math.abs(dy)) {
+            ghost.direction = dx > 0 ? 'right' : 'left';
+        } else {
+            ghost.direction = dy > 0 ? 'down' : 'up';
+        }
+    });
 }
 
 function checkCapsuleCollision() {
@@ -144,6 +211,9 @@ function gameLoop() {
     drawCapsules();
     drawPacman();
     movePacman();
+    moveGhosts();
+    chasePacman();
+    drawGhosts();
     requestAnimationFrame(gameLoop);
 }
 
@@ -167,7 +237,6 @@ window.addEventListener('keydown', (e) => {
 
 generateCapsules(); // Generar cápsulas
 gameLoop(); // Iniciar el ciclo del juego
-
 
 
 
