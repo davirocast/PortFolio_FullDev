@@ -8,13 +8,44 @@
 </head>
 <body>
     <div class="calculator">
-        <h2>Calculadora de Propinas</h2>
-        <input type="number" id="amount" placeholder="Monto de la cuenta">
-        <input type="number" id="tip" placeholder="Porcentaje de propina">
-        <button onclick="calculatetip()">Calcular</button> 
-        <p id="result"></p> <!--Aqui falta poner a mostrar el resultado en un box-->
+        <h2 class="calculator__title">Calculadora de Propinas</h2>
+        <div class="calculator__inputs">
+            <input type="number" id="amount" class="calculator__input" placeholder="Monto de la cuenta">
+            <input type="number" id="tip" class="calculator__input" placeholder="Porcentaje de propina">
+        </div>
+        <button id="calculate-btn" class="calculator__button">Calcular</button>
+        <div id="result-box" class="calculator__result-box">
+            <p id="result" class="calculator__result"></p>
+        </div>
     </div>
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__section">
+                <h3 class="footer__title">Sobre mí</h3>
+                <p class="footer__text">Soy un desarrollador Full Stack especializado en diseño y desarrollo web moderno. ¡Contáctame para colaborar!</p>
+            </div>
+            <div class="footer__section">
+                <h3 class="footer__title">Contacto</h3>
+                <ul class="footer__list">
+                    <li class="footer__item"><i class="fas fa-envelope"></i> <a href="mailto:drcvirtualbuss@gmail.com">drcvirtualbuss@gmail.com</a></li>
+                    <li class="footer__item"><i class="fas fa-phone"></i> +57 300 123 4567</li>
+                    <li class="footer__item"><i class="fas fa-map-marker-alt"></i> Colombia</li>
+                </ul>
+            </div>
+            <div class="footer__section">
+                <h3 class="footer__title">Tyr Odal Studio</h3>
+                <ul class="footer__list">
+                    <li class="footer__item"><i class="fas fa-globe"></i> <a href="https://www.tyrodalstudio.com" target="_blank">www.tyrodalstudio.com</a></li>
+                    <li class="footer__item"><i class="fab fa-facebook"></i> <a href="https://facebook.com/tyrodalstudio" target="_blank">Facebook</a></li>
+                    <li class="footer__item"><i class="fab fa-instagram"></i> <a href="https://instagram.com/tyrodalstudio" target="_blank">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p class="footer__copy">&copy; 2024 Tyr Odal Studio. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 
-    <script> src="tip_calculator.js"</script>
+    <script src="tip_calculator.js"></script>
 </body>
 </html>

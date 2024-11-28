@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contador de Palabras</title>
-    <link rel = "stylesheet" href="word_counter.css">
+    <title>Conversor de Moneda</title>
+    <link rel="stylesheet" href="currency_converter.css">
 </head>
 <body>
-    <div class="counter">
-        <h2 class="counter__title">Contador de Palabras</h2>
-        <textarea class="counter__textarea" id="text" placeholder="Escribe o pega tu texto aqui..." rows="6"></textarea>
-        <button class="counter__button" id="countButton">Contar</button>
-        <p class="counter__result"id="wordCount">Palabras: 0</p>
-        <p class="counter__result"id="charCount">Caracteres: 0</p>
+    <div class="converter">
+        <h1 class="converter__title">Conversor de Moneda</h1>
+        <div class="converter__form">
+            <input type="number" class="converter__input" id="amount" placeholder="Ingrese el monto">
+            <select class="converter__select" id="fromCurrency"></select>
+            <select class="converter__select" id="toCurrency"></select>
+            <button class="converter__button" id="convertButton">Convertir</button>
+        </div>
+
+        <p class="converter__result" id="result">Ingresa datos para ver el resultado</p>
     </div>
+
     <footer class="footer">
         <div class="footer__container">
             <div class="footer__section">
@@ -41,6 +46,7 @@
             <p class="footer__copy">&copy; 2024 Tyr Odal Studio. Todos los derechos reservados.</p>
         </div>
     </footer>
-    <script src ="/Enyoi/PortafolioFullDev_DRC/projects/word_counter/word_counter.js"></script>
+
+    <script src="/Enyoi/PortafolioFullDev_DRC/projects/currency_converter/currency_converter.js"></script>
 </body>
 </html>

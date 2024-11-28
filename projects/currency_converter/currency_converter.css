@@ -1,19 +1,21 @@
+/* Fondo Principal */
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff7eb3, #65d6ce);
     margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #3b3b98, #1dd1a1);
-    color: #fff;
+    height: 100vh;
     overflow: hidden;
-    height: 100%;
     margin-top: 80px;
 }
 
-.calculator {
+/* Contenedor Principal con efecto cristal*/
+
+.converter {
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     border-radius: 20px;
@@ -23,46 +25,84 @@ body {
     width: 400px;
     text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
 }
 
-.calculator__title {
-    font-size: 2rem;
+.converter::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+    transform: rotate(0deg);
+    animation: shine 6s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes shine {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*Titulo del Convertidor*/
+
+.converter__title {
+    font-size: 1.8rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     margin-bottom: 20px;
-    color: #3b3b98;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
 }
 
-.calculator__inputs {
+/*Formulario*/
+
+.converter__form {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    gap: 25px;
-    margin-bottom: 20px;
+    gap: 15px;
 }
 
-.calculator__input {
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(8px);
-    border: none;
-    border-radius: 15px;
-    padding: 10px;
-    color: #ffffff;
-    box-shadow: inset 4px 4px 8px rgba (0, 0, 0, 0.2),
-                inset -4px -4px 8px rgba (255, 255, 255, 0.25);
-    outline: none;
+/* Input de Cantidad */
+
+.converter__input {
+    background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    font-size: 1.1rem;
-    transition: all 0.3s ease-in-out;
+    border-radius: 12px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    outline: none;
+    color: #ffffff;
+    text-align: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2),
+                inset -5px -5px 10px rgba(255, 255, 255, 0.2);
 }
 
-.calculator__input:focus {
-    background: rgba(255, 255, 255, 0.25);
-    box-shadow: inset 2px 2px 4px rgba (0, 0, 0, 0.2),
-                inset -2px -2px 4px rgba (255, 255, 255, 0.4);
+/* Selector de Moneda */
+
+.converter__select {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    outline: none;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2),
+                inset -5px -5px 10px rgba(255, 255, 255, 0.2);
 }
 
-.calculator__button {
-    background: linear-gradient(145deg, #1dd1a1, #10ac84);
+/* Boton de Conversion */
+
+.converter__button {
+    background: linear-gradient(145deg, #ff8a00, #e52e71);
     border: none;
     border-radius: 15px;
     padding: 10px 20px;
@@ -75,29 +115,20 @@ body {
     margin-top: 15px;
 }
 
-.calculator__button:hover {
+.converter__button:hover {
     transform: scale(1.05);
-    background: linear-gradient(145deg, #10ac84, #1dd1a1);
+    background: linear-gradient(145deg, #e52e71, #ff8a00);
     box-shadow: 2px 2px 4px rgba (0, 0, 0, 0.2),
                 -2px -2px 4px rgba (255, 255, 255, 0.3);
 }
 
-.calculator__result-box {
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(8px);
-    border-radius: 15px;
-    padding: 20px;
-    margin-top: 20px;
-    box-shadow: inset 4px 4px 8px rgba (0, 0, 0, 0.2),
-                inset -4px -4px 8px rgba (255, 255, 255, 0.25);
-    min-height: 60px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-}
+/* Resultado de Conversion */
 
-.calculator__result-text {
+.converter__result {
     font-size: 1.2rem;
-    color: #3b3b98;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .footer {
@@ -174,7 +205,5 @@ body {
     padding-top: 10px;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
-
-
 
 

@@ -133,30 +133,48 @@ body {
 }
 
 .projects__card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #161623, -5px -5px 10px #3a3b5a;
     padding: 20px;
     text-align: center;
-    background: #28293e;
-    border-radius: 12PX;
-    box-shadow: 5px 5px 10px #161623, -5px -5px 10px #3a3b5a;
-    transition: all 0.3s ease;
+    margin: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .projects__card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
     box-shadow: 8px 8px 20px #161623, -8px -8px 20px #3a3b5a;
 }
 
 .projects__card-title {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-bottom: 10px;
     color: #ffcb6b;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .projects__card-description {
-    color: #ffffff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 1rem;
+    color: #e4e4e4;
+    margin-bottom: 15px;
 }
+
+.projects__card-link {
+    display: inline-block;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.projects__card-link:hover {
+    background: linear-gradient(135deg, #0072ff, #00c6ff);
+}
+
 
 /* Contact */
 
