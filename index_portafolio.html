@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio | Full Stack Developer</title>
-    <link rel="stylesheet" href="assets/css/styles_b_portafolio.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles_c_portafolio.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
     <header class="header">
@@ -15,7 +15,14 @@
 
         <h1 class="header__logo">*//Portfolio Full Dev Stack//*</h1>
         <nav class="header__nav">
-            <ul class="header__menu">
+            <!-- Menú hamburguesa -->
+            <div class="header__menu-toggle" id="menu-toggle" role="button" aria-label="Abrir menú">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <!-- Menú principal -->
+            <ul class="header__menu" id="menu">
                 <li class="header__menu-item"><a href="#about" class="header__menu-link">Sobre mí</a></li>
                 <li class="header__menu-item"><a href="#skills" class="header__menu-link">Habilidades</a></li>
                 <li class="header__menu-item"><a href="#projects" class="header__menu-link">Proyectos</a></li>
@@ -26,30 +33,36 @@
 
     <section id="about" class="section section--about">
         <h2 class="section__title">Sobre mí</h2>
-        <p class="section__description">Soy un desarrollador Full Stack con experiencia en diseño, desarrollo y optimización de aplicaciones web...</p>
+        <p class="section__description">Soy un profesional apasionado por la tecnología y la innovación, con un enfoque en mejorar experiencias digitales. Mi formación y experiencia me han permitido desarrollar tanto habilidades técnicas como competencias transversales clave para el éxito en la industria.
+
+            Me considero una persona analítica, capaz de abordar problemas complejos con creatividad y precisión. La comunicación efectiva es una de mis fortalezas, ya que me permite colaborar en equipos multidisciplinarios y expresar ideas de manera clara a diferentes audiencias. Además, mi capacidad para gestionar el tiempo y ser proactivo me permite cumplir plazos sin comprometer la calidad del trabajo.
+
+            Estoy comprometido con el aprendizaje continuo y con mantenerme actualizado en las últimas tendencias tecnológicas, lo que me permite aplicar soluciones innovadoras. Valoro competencias como la empatía, la resiliencia y el trabajo en equipo, esenciales para crear relaciones laborales sólidas y productivas.
+
+            Mi objetivo es seguir creciendo en este campo, aportar valor a cada proyecto y contribuir al desarrollo de soluciones tecnológicas que transformen el futuro digital.</p>
     </section>
 
     <section id="skills" class="section section--skills">
         <h2 class="section__title">Habilidades</h2>
         <ul class="skills__list">
             <li class="skills__item">
-                <i class="skills__icon fab fa-html5"></i>
-                <span class="skills__name">HTML5 & CSS3</span>
+                <i class="skills__icon bx bxl-html5"></i>
+                <span class="skills__name">HTML5 & CSS</span>
             </li>
             <li class="skills__item">
-                <i class="skills__icon fab fa-js-square"></i>
+                <i class="skills__icon bx bxl-javascript"></i>
                 <span class="skills__name">JavaScript</span>
             </li>
             <li class="skills__item">
-                <i class="skills__icon fab fa-java"></i>
+                <i class="skills__icon bx bxl-java"></i>
                 <span class="skills__name">Java</span>
             </li>
             <li class="skills__item">
-                <i class="skills__icon fab fa-react"></i>
+                <i class="skills__icon bx bxl-react"></i>
                 <span class="skills__name">React, Node.js</span>
             </li>
             <li class="skills__item">
-                <i class="skills__icon fas fa-database"></i>
+                <i class="skills__icon bx bxs-data"></i>
                 <span class="skills__name">SQL & NoSQL</span>
             </li>
         </ul>
@@ -73,6 +86,11 @@
                 <p class="projects__card-description">Convertidor de divisas con diseño neumórfico.</p>
                 <a href="./projects/currency_converter/currency_converter.html" class="projects__card-link" target="_blank">Ver proyecto</a>
             </div>
+            <div class="projects__card">
+                <h3 class="projects__card-title">DroidDecorWeb</h3>
+                <p class="projects__card-description">Pagina web para comercializar fondos de pantalla creados en IA</p>
+                <a href="/WEB/AI_webpage/index.html" class="projects__card-link" target="_blank">Ver proyecto</a>
+            </div>
         </div>
     </section>
 
@@ -90,11 +108,23 @@
     </section>
 
     <footer class="footer">
-        <p class = "footer__text">Para colaboraciones y pedidos personalizados, contactanos en <a href="mailto:drcvirtualbuss@gmail.com">drcvirtualbuss@gmail.com</a></p>
-        <ul class ="footer__social-links">
-            <li><a href="https://www.behance.net/davidrojas59" target="_blank" aria-label="Behance"><i data-feather="behance"></i></a></li>
-            <li><a href="https://www.facebook.com/drcvirtualbuss" target="_blank" aria-label="Facebook"><i data-feather="facebook"></i></a></li>
-            <li><a href="https://www.github.com/drcvirtualbuss" target="_blank" aria-label="GitHub"><i data-feather="github"></i></a></li>
+        <p class="footer__text">Para colaboraciones y pedidos personalizados, contáctanos en <a href="mailto:drcvirtualbuss@gmail.com">drcvirtualbuss@gmail.com</a></p>
+        <ul class="footer__social-links">
+            <li class="footer__social-link">
+                <a href="#" aria-label="Facebook"><i class='bx bxl-facebook-circle'></i></a>
+            </li>
+            <li class="footer__social-link">
+                <a href="#" aria-label="WhatsApp"><i class='bx bxl-whatsapp'></i></a>
+            </li>
+            <li class="footer__social-link">
+                <a href="#" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+            </li>
+            <li class="footer__social-link">
+                <a href="#" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+            </li>
+            <li class="footer__social-link">
+                <a href="#" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+            </li>
         </ul>
         <p class="footer__text">&copy; 2024 Tyr Odal Studio. Todos los derechos reservados</p>
     </footer>

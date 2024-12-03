@@ -1,4 +1,4 @@
-/* Estilo Neumórfico */
+/* Estilo Futurista UI */
 * {
     margin: 0;
     padding: 0;
@@ -7,8 +7,8 @@
 }
 
 body {
-    background: #1e1e2e;
-    color: #ffffff;
+    background: #121212; /* Fondo oscuro para estilo futurista */
+    color: #e4e4e4; /* Texto claro para mejor contraste */
     line-height: 1.6;
 }
 
@@ -17,8 +17,9 @@ body {
     position: relative;
     text-align: center;
     padding: 40px 20px;
-    background: #28293e;
-    box-shadow: 5px 5px 10px #161623, -5px -5px 10px #3a3b5a;
+    background: #1d1d2b; /* Fondo oscuro con tonalidades frías */
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.8), -5px -5px 20px rgba(0, 0, 0, 0.5); /* Efecto de sombra más notorio */
+    border-radius: 15px;
 }
 
 .header__background-image {
@@ -28,39 +29,40 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.2;
+    opacity: 0.3; /* Opacidad leve para la imagen de fondo */
     z-index: -1;
 }
 
 .header__logo {
-    font-size: 2em;
-    color: #ffcb6b;
+    font-size: 2.5em;
+    color: #00eaff; /* Color brillante y futurista */
     font-weight: bold;
     margin-bottom: 20px;
+    text-shadow: 0px 0px 10px rgba(0, 234, 255, 0.8);
 }
 
 .header__menu {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 25px;
     list-style: none;
     padding: 0;
 }
 
 .header__menu-link {
-    color: #ffffff;
+    color: #e4e4e4;
     text-decoration: none;
     font-size: 1.2rem;
     padding: 10px 15px;
     border-radius: 12px;
-    background: #28293e;
-    box-shadow: 5px 5px 10px #161623, -5px -5px 10px #3a3b5a;
+    background: #2a2a3a;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7), -5px -5px 15px rgba(0, 0, 0, 0.4);
     transition: all 0.3s ease;
 }
 
 .header__menu-link:hover {
-    transform: translateY(-3px);
-    color: #ff6e6e;
+    transform: translateY(-5px);
+    color: #00eaff;
 }
 
 /* Menú Hamburguesa */
@@ -78,7 +80,7 @@ body {
 .header__menu-toggle .bar {
     width: 30px;
     height: 4px;
-    background: #ffcb6b;
+    background: #00eaff;
     border-radius: 2px;
 }
 
@@ -87,14 +89,14 @@ body {
     .header__menu {
         display: none;
         flex-direction: column;
-        background: #28293e;
+        background: #2a2a3a;
         position: absolute;
         top: 70px;
         right: 20px;
         width: 200px;
         border-radius: 12px;
         padding: 10px;
-        box-shadow: 5px 5px 10px #161623, -5px -5px 10px #3a3b5a;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7), -5px -5px 10px rgba(0, 0, 0, 0.4);
     }
 
     .header__menu.active {
@@ -113,17 +115,17 @@ body {
 }
 
 .section__title {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 30px;
-    color: #ffcb6b;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: #00eaff;
+    text-shadow: 0px 0px 15px rgba(0, 234, 255, 0.7);
 }
 
 .section__description {
     font-size: 1.2rem;
     margin-bottom: 30px;
-    color: #ffffff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: #e4e4e4;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* Skills */
@@ -140,26 +142,31 @@ body {
     width: 150px;
     padding: 20px;
     text-align: center;
-    background: #28293e;
+    background: #1d1d2b;
     border-radius: 12px;
-    box-shadow: 5px 5px 10px #161623, -5px -5px 10px #3a3b5a;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.8), -5px -5px 20px rgba(0, 0, 0, 0.5);
     transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .skills__item:hover {
     transform: translateY(-5px);
-    box-shadow: 8px 8px 20px #161623, -8px -8px 20px #3a3b5a;
+    box-shadow: 8px 8px 30px rgba(0, 0, 0, 0.8), -8px -8px 30px rgba(0, 0, 0, 0.5);
 }
 
 .skills__icon {
     font-size: 2.5em;
     margin-bottom: 8px;
-    color: #ffcb6b;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: #00eaff;
+    text-shadow: 0px 0px 10px rgba(0, 234, 255, 0.7);
 }
 
 .skills__name {
     font-size: 1.2rem;
+    text-align: center;
 }
 
 /* Projects */
@@ -172,10 +179,10 @@ body {
 }
 
 .projects__card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px);
     border-radius: 20px;
-    box-shadow: 5px 5px 10px #161623, -5px -5px 10px #3a3b5a;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.8), -5px -5px 20px rgba(0, 0, 0, 0.5);
     padding: 20px;
     text-align: center;
     margin: 20px;
@@ -184,13 +191,13 @@ body {
 
 .projects__card:hover {
     transform: translateY(-10px);
-    box-shadow: 8px 8px 20px #161623, -8px -8px 20px #3a3b5a;
+    box-shadow: 8px 8px 30px rgba(0, 0, 0, 0.8), -8px -8px 30px rgba(0, 0, 0, 0.5);
 }
 
 .projects__card-title {
     font-size: 1.5rem;
     margin-bottom: 10px;
-    color: #ffcb6b;
+    color: #00eaff;
 }
 
 .projects__card-description {
@@ -235,9 +242,9 @@ body {
     padding: 10px;
     border-radius: 12px;
     border: none;
-    background: #28293e;
-    color: #ffffff;
-    box-shadow: 5px 5px 10px #161623, -5px -5px 10px #3a3b5a;
+    background: #2a2a3a;
+    color: #e4e4e4;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7), -5px -5px 15px rgba(0, 0, 0, 0.4);
 }
 
 .contact__button {
@@ -247,21 +254,20 @@ body {
     background: #ff6e6e;
     border: none;
     border-radius: 12px;
-    box-shadow: 5px 5px 10px #161623, -5px -5px 10px #3a3b5a;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8), -5px -5px 10px rgba(0, 0, 0, 0.5);
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .contact__button:hover {
-    background: #ffcb6b;
+    background: #00eaff;
 }
 
 /* Footer */
 .footer {
-    padding: 30px 20px;
+    padding: 50px 20px;
+    background: #1d1d2b;
     text-align: center;
-    background: #1c1c28;
-    color: #ffffff;
 }
 
 .footer__social-links {
@@ -270,22 +276,22 @@ body {
     gap: 20px;
     list-style: none;
     padding: 0;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
-.footer__social-link a {
-    color: #ffcb6b;
-    font-size: 2rem;
-    text-decoration: none;
-    transition: color 0.3s ease;
+.footer__social-icon {
+    font-size: 1.5rem;
+    color: #00eaff;
+    transition: transform 0.3s ease;
 }
 
-.footer__social-link a:hover {
-    color: #ff6e6e;
+.footer__social-icon:hover {
+    transform: translateY(-5px);
 }
 
 i.bx {
     font-size: 2rem;
-    color: #ffcb6b;
+    color: #00eaff;
 }
 
