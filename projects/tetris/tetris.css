@@ -1,120 +1,107 @@
-/* Reset */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #000;
-    color: #fff;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #121212, #1a1a1a);
+    color: #f5f5f5;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-}
-
-.tetris {
-    width: 80vw;
-    height: 90vh;
+  }
+  
+  /* Tetris Container */
+  .tetris {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 5px solid #444;
-    background-color: #222;
-}
-
-.tetris__header {
+    width: 350px;
+    background: #2b2b2b;
+    border: 2px solid #3a3a3a;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  }
+  
+  /* Header Section */
+  .tetris__header {
     text-align: center;
-    margin: 10px 0;
-}
-
-.tetris__title {
-    font-size: 2rem;
-    color: #0ff;
-}
-
-.tetris__container {
-    display: flex;
-    width: 100%;
-    height: 100%;
-}
-
-.tetris__stats {
-    width: 30%;
     padding: 10px;
-    background-color: #111;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-right: 5px solid #444;
-}
-
-.tetris__type,
-.tetris__lines,
-.tetris__level,
-.tetris__score {
-    margin: 10px 0;
-    font-size: 1.2rem;
-}
-
-.tetris__statistics {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.tetris__stats-title {
-    margin-bottom: 10px;
-}
-
-.tetris__stats-list {
-    list-style: none;
-    text-align: left;
-}
-
-.tetris__stats-item {
-    margin: 5px 0;
-}
-
-.tetris__next-title {
-    margin-bottom: 5px;
-}
-
-.tetris__next-preview {
-    width: 100px;
-    height: 100px;
-    background-color: #333;
-    border: 2px solid #444;
-}
-
-.tetris__game {
-    width: 70%;
+    background: #1c1c1c;
+    border-bottom: 2px solid #3a3a3a;
+  }
+  
+  .tetris__title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+  }
+  
+  .tetris__score-board {
+    margin-top: 5px;
+    font-size: 16px;
+  }
+  
+  .tetris__score-board__label {
+    color: #fff;
+  }
+  
+  .tetris__score-board__value {
+    font-weight: bold;
+    color: #00ff88;
+  }
+  
+  /* Main Grid Section */
+  .tetris__main {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-}
-
-.tetris__grid {
+    padding: 10px;
+    background: #1e1e1e;
+  }
+  
+  .tetris__grid {
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(20, 1fr);
-    width: 90%;
-    height: 90%;
-    border: 2px solid #555;
-    background-color: #000;
-}
-
-.square {
-    width: 100%;
-    height: 100%;
-    background-color: #111;
-    border: 1px solid #333;
-    transition: background-color 0.2s;
-}
-
-.square--filled {
-    background-color: #0ff;
-}
+    grid-template-columns: repeat(10, 30px);
+    grid-template-rows: repeat(20, 30px);
+    gap: 2px;
+    background: #121212;
+    border: 2px solid #3a3a3a;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+  }
+  
+  .tetris__grid__cell {
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .tetris__grid__cell--tetromino {
+    background-color: #00ffff;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+  }
+  
+  .tetris__grid__cell--taken {
+    background-color: #888;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Footer Section */
+  .tetris__footer {
+    text-align: center;
+    font-size: 12px;
+    padding: 5px;
+    background: #1c1c1c;
+    border-top: 2px solid #3a3a3a;
+    color: #f5f5f5;
+  }
+  
 

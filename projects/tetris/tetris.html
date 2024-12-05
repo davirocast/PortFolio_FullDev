@@ -1,45 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tetris Game</title>
-    <link rel="stylesheet" href="tetris.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tetris Game</title>
+  <link rel="stylesheet" href="tetris.css">
 </head>
-<body class="body">
-    <div class="tetris">
-        <header class="tetris__header">
-            <h1 class="tetris__title">Tetris</h1>
-        </header>
-        <div class="tetris__container">
-            <div class="tetris__stats">
-                <div class="tetris__type">A-TYPE</div>
-                <div class="tetris__lines">LINES: <span id="lines-count">000</span></div>
-                <div class="tetris__statistics">
-                    <h3 class="tetris__statistics-title">STATISTICS</h3>
-                    <ul class="tetris__statistics-list">
-                        <li class="tetris__stats-item">O<span id="stat-o">000</span></li>
-                        <li class="tetris__stats-item">T<span id="stat-t">000</span></li>
-                        <li class="tetris__stats-item">Z<span id="stat-z">000</span></li>
-                        <li class="tetris__stats-item">S<span id="stat-s">000</span></li>
-                        <li class="tetris__stats-item">L<span id="stat-l">000</span></li>
-                        <li class="tetris__stats-item">J<span id="stat-j">000</span></li>
-                        <li class="tetris__stats-item">I<span id="stat-i">000</span></li>
-                    </ul>
-                </div>
-                <div class="tetris__next">
-                    <h3 class="tetris__next-title">NEXT</h3>
-                    <div class="teris__next-preview" id="next-preview"></div>
-                </div>
-                <div class="tetris__level">
-                    LEVEL: <span id="score-count">0000000</span>
-                </div>
-            </div>
-            <div class="tetris__game">
-                <div id="grid" class="tetris__grid"></div>
-            </div>
-        </div>
-    </div>
-    <script src ="tetris.js" defer></script>
+<body>
+  <div class="tetris">
+    <header class="tetris__header">
+      <h1 class="tetris__title">TETRIS</h1>
+      <div class="tetris__score-board">
+        <span class="tetris__score-board__label">Score:</span>
+        <span id="score" class="tetris__score-board__value">0</span>
+      </div>
+    </header>
+    <main class="tetris__main">
+      <div class="tetris__grid"></div>
+    </main>
+    <footer class="tetris__footer">
+      <p>© 2024 - Tetris Game | Designed with Futuristic UI</p>
+    </footer>
+  </div>
+  <script src="tetris.js"></script>
 </body>
 </html>

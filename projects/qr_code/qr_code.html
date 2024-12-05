@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="qr_code.css">
+</head>
+<body class="page">
+    <header class="header">
+        <h1 class="header__title">Generador de Codigo QR</h1>
+    </header>
+    <main class="main">
+        <section class="qr-generator">
+            <form class="qr-code__form" id="qr-form">
+                <input type = "url" class="qr-generator__input" id="urlInput" placeholder="Ingrese la URL" required>
+                <button type="submit" class="qr-generator__button">Generar</button>
+            </form>
+            <div class="qr-generator__output" id="qrOutput"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__section">
+                <h3 class="footer__title">Sobre mí</h3>
+                <p class="footer__text">Soy un desarrollador Full Stack especializado en diseño y desarrollo web moderno. ¡Contáctame para colaborar!</p>
+            </div>
+            <div class="footer__section">
+                <h3 class="footer__title">Contacto</h3>
+                <ul class="footer__list">
+                    <li class="footer__item"><i class="fas fa-envelope"></i> <a href="mailto:drcvirtualbuss@gmail.com">drcvirtualbuss@gmail.com</a></li>
+                    <li class="footer__item"><i class="fas fa-phone"></i> +57 321 278 8210</li>
+                    <li class="footer__item"><i class="fas fa-map-marker-alt"></i> Colombia</li>
+                </ul>
+            </div>
+            <div class="footer__section">
+                <h3 class="footer__title">Tyr Odal Studio</h3>
+                <ul class="footer__list">
+                    <li class="footer__item"><i class="fas fa-globe"></i> <a href="https://www.tyrodalstudio.com" target="_blank">www.tyrodalstudio.com</a></li>
+                    <li class="footer__item"><i class="fab fa-facebook"></i> <a href="https://facebook.com/tyrodalstudio" target="_blank">Facebook</a></li>
+                    <li class="footer__item"><i class="fab fa-instagram"></i> <a href="https://instagram.com/tyrodalstudio" target="_blank">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p class="footer__copy">&copy; 2024 Tyr Odal Studio. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="qr_code.js"></script>
+
+</body>
+</html>
