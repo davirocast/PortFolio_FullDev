@@ -295,3 +295,15 @@ i.bx {
     color: #00eaff;
 }
 
+.section__image-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section__image {
+    max-width: 100px; /* Cambia este valor según tus necesidades */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+

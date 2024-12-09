@@ -24,6 +24,28 @@ document.querySelectorAll('.header__menu-link').forEach(link => {
     });
 });
 
+// Dynamic Skills Section
+const skillsData = [
+    { icon: 'bxl-html5', name: 'HTML5 & CSS' },
+    { icon: 'bxl-javascript', name: 'JavaScript' },
+    { icon: 'bxl-java', name: 'Java' },
+    { icon: 'bxl-react', name: 'React, Node.js' },
+    { icon: 'bxs-data', name: 'SQL & NoSQL' }
+];
+
+const skillsContainer = document.querySelector('.skills__list');
+
+skillsData.forEach(skill => {
+    const skillItem = document.createElement('li');
+    skillItem.classList.add('skills__item');
+    skillItem.innerHTML = `
+        <i class="skills__icon bx ${skill.icon}"></i>
+        <span class="skills__name">${skill.name}</span>
+    `;
+    skillsContainer.appendChild(skillItem);
+});
+
+
 // Animations for Skill Items
 const skillItems = document.querySelectorAll('.skills__item');
 
@@ -36,6 +58,48 @@ skillItems.forEach(item => {
     item.addEventListener('mouseout', () => {
         item.style.transform = 'scale(1)';
     });
+});
+
+// Dynamic Projects Section
+const projectsData = [
+    {
+        title: 'Tip Calculator',
+        description: 'Calculadora interactiva de propinas con diseño neumórfico.',
+        link: './projects/tip_calculator/tip_calculator.html'
+    },
+    {
+        title: 'Contador de Palabras',
+        description: 'Contador de caracteres y palabras con diseño neumórfico.',
+        link: './projects/word_counter/word_counter.html'
+    },
+    {
+        title: 'Convertidor de Moneda',
+        description: 'Convertidor de divisas con diseño neumórfico.',
+        link: './projects/currency_converter/currency_converter.html'
+    },
+    {
+        title: 'DroidDecorWeb',
+        description: 'Página web para comercializar fondos de pantalla creados en IA.',
+        link: '/WEB/AI_webpage/index.html'
+    },
+    {
+        title: 'Tetris Game',
+        description: 'Recreación de Tetris para la web.',
+        link: '/Enyoi/PortafolioFullDev_DRC/projects/tetris/tetris.html'
+    }
+];
+
+const projectsContainer = document.querySelector('.projects__list');
+
+projectsData.forEach(project => {
+    const projectCard = document.createElement('div');
+    projectCard.classList.add('projects__card');
+    projectCard.innerHTML = `
+        <h3 class="projects__card-title">${project.title}</h3>
+        <p class="projects__card-description">${project.description}</p>
+        <a href="${project.link}" class="projects__card-link" target="_blank">Ver proyecto</a>
+    `;
+    projectsContainer.appendChild(projectCard);
 });
 
 // Back to top button (optional)
