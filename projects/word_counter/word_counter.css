@@ -148,3 +148,92 @@ body {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+/* Ajustes generales para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    body {
+        margin-top: 100px;
+        height: auto;
+        padding: 10px;
+        justify-content: flex-start;
+    }
+
+    .counter {
+        padding: 1.5rem;
+        width: 100%;
+        max-width: 350px;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1),
+                    -5px -5px 15px rgba(255, 255, 255, 0.7);
+    }
+
+    .counter__title {
+        font-size: 1.5rem;
+    }
+
+    .counter__textarea {
+        height: 100px;
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .counter__button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .counter__result {
+        font-size: 1rem;
+    }
+
+    .footer {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .footer__container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footer__section {
+        text-align: center;
+    }
+
+    .footer__title {
+        font-size: 1.3rem;
+    }
+
+    .footer__text {
+        font-size: 0.9rem;
+    }
+
+    .footer__item {
+        font-size: 0.9rem;
+        justify-content: center;
+    }
+
+    .footer__copy {
+        font-size: 0.8rem;
+    }
+}
+
+/* Ajustes adicionales para pantallas muy pequeñas */
+@media screen and (max-width: 480px) {
+    .counter {
+        padding: 1rem;
+        max-width: 300px;
+    }
+
+    .counter__textarea {
+        height: 80px;
+    }
+
+    .counter__title {
+        font-size: 1.3rem;
+    }
+
+    .counter__button {
+        font-size: 0.8rem;
+    }
+}

@@ -76,16 +76,6 @@ const projectsData = [
         title: 'Convertidor de Moneda',
         description: 'Convertidor de divisas con diseño neumórfico.',
         link: './projects/currency_converter/currency_converter.html'
-    },
-    {
-        title: 'DroidDecorWeb',
-        description: 'Página web para comercializar fondos de pantalla creados en IA.',
-        link: '/Enyoi/PortafolioFullDev_DRC/projects/WEB/index.html'
-    },
-    {
-        title: 'Tetris Game',
-        description: 'Recreación de Tetris para la web.',
-        link: '/Enyoi/PortafolioFullDev_DRC/projects/tetris/tetris.html'
     }
 ];
 

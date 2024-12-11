@@ -206,4 +206,84 @@ body {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+/* General adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 20px;
+        margin-top: 0;
+        height: auto;
+    }
+
+    .converter {
+        width: 100%;
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .converter__title {
+        font-size: 1.5rem;
+    }
+
+    .converter__form {
+        gap: 10px;
+    }
+
+    .converter__input, .converter__select {
+        font-size: 0.9rem;
+        padding: 8px 10px;
+    }
+
+    .converter__button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .converter__result {
+        font-size: 1rem;
+    }
+
+    .footer {
+        padding: 20px;
+        border-radius: 15px 15px 0 0;
+        width: 100%;
+    }
+
+    .footer__container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .footer__section {
+        min-width: auto;
+    }
+
+    .footer__title {
+        font-size: 1.2rem;
+    }
+
+    .footer__text, .footer__item {
+        font-size: 0.9rem;
+    }
+}
+
+/* Further adjustments for very small screens */
+@media screen and (max-width: 480px) {
+    .converter__title {
+        font-size: 1.2rem;
+    }
+
+    .converter__button {
+        padding: 6px 12px;
+    }
+
+    .footer__title {
+        font-size: 1rem;
+    }
+
+    .footer__text, .footer__item {
+        font-size: 0.8rem;
+    }
+}
 
