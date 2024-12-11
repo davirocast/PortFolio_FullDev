@@ -80,7 +80,7 @@ const projectsData = [
     {
         title: 'DroidDecorWeb',
         description: 'Página web para comercializar fondos de pantalla creados en IA.',
-        link: '/Enyoi/PortafolioFullDev_DRC/projects/WEB/AI_webpage/index.html'
+        link: '/Enyoi/PortafolioFullDev_DRC/projects/WEB/index.html'
     },
     {
         title: 'Tetris Game',
