@@ -2,7 +2,7 @@
 
 Este commit hace referencia al proyecto de portafolio realizado para
 el proyecto integrador del modulo 2 del programa de ENYOI.
-En el se hiran plasmando mas cambios y este portafolio va a seguir
+En el se iran plasmando mas cambios y este portafolio va a seguir
 cambiando conforme vaya avanzando en las tematicas mas avanzadas del
 curso.
 >
