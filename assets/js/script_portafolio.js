@@ -26,11 +26,11 @@ document.querySelectorAll('.header__menu-link').forEach(link => {
 
 // Dynamic Skills Section
 const skillsData = [
-    { icon: 'bxl-html5', name: 'HTML5 & CSS' },
-    { icon: 'bxl-javascript', name: 'JavaScript' },
-    { icon: 'bxl-java', name: 'Java' },
-    { icon: 'bxl-react', name: 'React, Node.js' },
-    { icon: 'bxs-data', name: 'SQL & NoSQL' }
+    { icon: 'bxl-html5', name: 'HTML5 & CSS', level: 80 },
+    { icon: 'bxl-javascript', name: 'JavaScript', level: 65 },
+    { icon: 'bxl-java', name: 'Java', level: 70 },
+    { icon: 'bxl-react', name: 'React, Node.js', level: 60 },
+    { icon: 'bxs-data', name: 'SQL & NoSQL', level: 50 }
 ];
 
 const skillsContainer = document.querySelector('.skills__list');
@@ -41,10 +41,24 @@ skillsData.forEach(skill => {
     skillItem.innerHTML = `
         <i class="skills__icon bx ${skill.icon}"></i>
         <span class="skills__name">${skill.name}</span>
+        <div class="skills__progress-bar">
+            <div class="skills__progress-fill" style="width: 0%" data-level="${skill.level}"></div>
+        </div>
     `;
     skillsContainer.appendChild(skillItem);
 });
 
+// Animate progress bars on page load
+window.addEventListener('DOMContentLoaded', () => {
+    const progressBars = document.querySelectorAll('.skills__progress-fill');
+    progressBars.forEach(bar => {
+        const level = bar.getAttribute('data-level');
+        setTimeout(() => {
+            bar.style.width = `${level}%`;
+            bar.style.transition = 'width 1.5s ease-in-out';
+        }, 200); // Delay to ensure smooth animation
+    });
+});
 
 // Animations for Skill Items
 const skillItems = document.querySelectorAll('.skills__item');
